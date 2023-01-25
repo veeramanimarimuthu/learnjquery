@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First & Last Selector</title>
+</head>
+<body>
+    <h1>FIRST & LAST SELECTOR</h1>
+    <h2 class="a" >I Learn Jqurey</h2>
+    <i class="a"> JavaScript :</i>
+    <p id="b">Learn More Be Smart</p>
+    <i class="a"> React :</i>
+    <p class="a">Open Source File</p>
+    <script src="js/jquery.js"></script>
+    <script>
+        $('document').ready(function(){
+    $('.a:first').css('background-color','orange');
+    $('.a:last').css('background-color','green');
+});
+</script>
+</body>
+</html>

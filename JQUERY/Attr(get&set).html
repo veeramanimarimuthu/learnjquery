@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attr In Jqurey</title>
+</head>
+<body>
+    <h1> ATTR IN JQUREY</h1>
+   <img class="a" src="image/img1.jpg" alt="wonders" width="380px" height="400">
+   <!-- <img src="image/img2.jpg" alt="wonders" width="300px" height="300"> -->
+   <!-- <img src="image/img3.jpg" alt="wonders" width="300px" height="300"> -->
+   <img class="b" src="image/img4.jpg" alt="wonders" width="380px" height="400">
+    <script src="js/jquery.js"></script>
+    <script>
+        $('document').ready(function(){
+        $('img.a').click(function(){
+            var a =$('.a').attr('src');
+            $('.a').attr('src','image/img2.jpg');    
+        });
+        $('img.b').mouseenter(function(){
+            var b =$('.b').attr('src');
+            $('.b').attr('src','image/img3.jpg');    
+        });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First() In Jqurey</title>
+    <style>
+        li{color:black;}
+        .color{color: red;}
+    </style>
+</head>
+<body>
+    <h1>FIRST() IN JQUREY</h1>
+    <h1>nth CHILD WITH eq() IN JQUREY</h1>
+<ul class="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVASCRIPT</li>
+    <li>      
+<ul>
+    <li>C PROGRAM</li>
+    <li>C++ PROGRAM</li>
+    <li>JAVA</li>
+  </ul>
+    </li>
+</ul>
+    <script src="js/jquery.js"></script>
+    <script>
+        $('document').ready(function(){
+    // $('ul.list').children('li:first-child').addClass('color');
+    $('ul.list').children('li').first().addClass('color');
+     //$('ul.list').children('li:nth-child(2)').text('This Is Nth Child By Css Jqurey');
+    $('ul.list').children('li').eq(2).text('This Is eq() Child By Css Jqurey(array index)');
+
+});
+</script>
+</body>
+</html>
