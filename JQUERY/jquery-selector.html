@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Selector</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <section class="elements-selectors">
+        <!-- The jQuery element selector selects elements based on the element name.
+            Specifying an element name as string e.g. $('p') will return an array of all the <p> elements in a webpage. -->
+        <div class="container">
+           <div class="row justify-content-center py-5">
+                <div class="col-12 col-lg-9">
+                    <h1>Elements Selector</h1>
+                    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, incidunt.</h6>
+                    <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</h6>
+                    <button id="element-btn" class="btn btn-primary mt-3">click me to Hidden paragraph</button>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="id-selectors">
+        <!-- The jQuery #id selector uses the id attribute of an HTML tag to find the specific element. -->
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                 <div class="col-12 col-lg-9">
+                     <h1>Id Selector</h1>
+                     <p id="id-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, incidunt.</p>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</p>
+                     <button id="id-btn" class="btn btn-primary">click me to Hidden paragraph</button>
+                 </div>
+            </div>
+         </div>
+    </section>
+
+    <section class="class-selectors">
+        <!-- The jQuery .class selector finds elements with a specific class. -->
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                 <div class="col-12 col-lg-9">
+                     <h1>Class Selector</h1>
+                     <p class="class-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, incidunt.</p>
+                     <p class="class-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</p>
+                     <button id="class-btn" class="btn btn-primary">click me to Hidden paragraph</button>
+                 </div>
+            </div>
+         </div>
+    </section>
+
+    <section class="multiple-selectors">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                 <div class="col-12 col-lg-9">
+                     <h1>Multiple Selector</h1>
+                     <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</h5>
+                     <p id="multiple-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</p>
+                     <p class="multiple-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, incidunt.</p>
+                     <button id="multiple-btn" class="btn btn-primary">click me to Hidden paragraph</button>
+                 </div>
+            </div>
+         </div>
+    </section>
+
+    <section class="class-with-elements-selectors">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                 <div class="col-12 col-lg-9">
+                     <h1>Class Width Elements Selector</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</p>
+                     <p class="pink">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione tenetur autem soluta!</p>
+                     <p class="green">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, incidunt.</p>
+                 </div>
+            </div>
+         </div>
+    </section>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        // $("document").ready(function () {
+        //     alert('hello,welcome to learn jquery');
+        // });
+        $(document).ready(function() {
+            $('#element-btn').click(function(){
+                $('h6').hide();
+            });
+            $('#id-btn').click(function(){
+                $('#id-paragraph').hide();
+            });
+            $('#class-btn').click(function(){
+                $('.class-paragraph').hide()
+            });
+            $('#multiple-btn').click(function(){
+                $('h5, .multiple-paragraph, #multiple-paragraph').html('hello JQuery');
+                $('h5, .multiple-paragraph, #multiple-paragraph').css('color','red');
+            });
+            $('p.green').css('color','green');
+        });
+    </script>
+</body>
+</html>
