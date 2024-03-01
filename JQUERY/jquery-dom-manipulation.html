@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM Manipulation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <section class="get-text-section py-5">
+        <div class="text-center">
+            <h1>jQuery DOM Manipulation</h1>
+            <h3>Get Content - text(), html(), and val()</h3>
+            <p>text() - Sets or returns the text content of selected elements</p>
+            <p>html() - Sets or returns the content of selected elements (including HTML markup)</p>
+            <p>val() - Sets or returns the value of form fields</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Get Content - text()</h3>
+                    <p class="change-text">hello i'm learning JQuery,it's <strong>easy to learn</strong>.</p>
+                    <button id="get-text" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-html-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Get Content - html()</h3>
+                    <p class="change-html">hello i'm learning JQuery,it's <strong>easy to learn</strong>.</p>
+                    <button id="get-html" class="btn btn-info">Show html</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-val-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Get Content - val()</h3>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <input type="text" name="name" value=" " id="full-name" class="form-control">
+                        </div>
+                    </form>
+                    <button id="get-val" class="btn btn-info">Show val</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#get-text').click(function(){
+                alert('Text : ' + $('.change-text').text());
+            });
+            $('#get-html').click(function(){
+                alert('html : ' + $('.change-html').html());
+            });
+            $('#get-val').click(function(){
+                alert('val : ' + $('#full-name').val());
+            });
+        });
+    </script>
+
+</body>
+</html>
