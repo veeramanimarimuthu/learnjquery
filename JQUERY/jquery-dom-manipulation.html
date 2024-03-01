@@ -10,14 +10,16 @@
 <body>
 
     <section class="get-text-section py-5">
-        <div class="text-center">
-            <h1>jQuery DOM Manipulation</h1>
-            <h3>Get Content - text(), html(), and val()</h3>
-            <p>text() - Sets or returns the text content of selected elements</p>
-            <p>html() - Sets or returns the content of selected elements (including HTML markup)</p>
-            <p>val() - Sets or returns the value of form fields</p>
-        </div>
+        <h1 class="text-center py-3">jQuery DOM Manipulation</h1>
         <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Get Content - text(), html(), and val()</h3>
+                    <p>text() - Sets or returns the text content of selected elements</p>
+                    <p>html() - Sets or returns the content of selected elements (including HTML markup)</p>
+                    <p>val() - Sets or returns the value of form fields</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12 col-lg-9">
                     <h3>Get Content - text()</h3>
@@ -57,6 +59,55 @@
         </div>
     </section>
 
+    <section class="set-text-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Set Content - text(), html(), and val()</h3>
+                    <p>text() - Sets or returns the text content of selected elements</p>
+                    <p>html() - Sets or returns the content of selected elements (including HTML markup)</p>
+                    <p>val() - Sets or returns the value of form fields</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Set Content - text()</h3>
+                    <p>hello <span class="change-set-text text-success fs-4"> </span> i'm learning JQuery.</p>
+                    <button id="set-text" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="set-html-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Set Content - html()</h3>
+                    <p>hello <span class="change-set-html text-danger fs-4"> </span> i'm learning JQuery.</p>
+                    <button id="set-html" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="set-val-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Set Content - val()</h3>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <input type="text" name="name" value="hello" id="full-name-set" class="form-control">
+                        </div>
+                    </form>
+                    <button id="set-val" class="btn btn-info">Show val</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function(){
@@ -68,6 +119,15 @@
             });
             $('#get-val').click(function(){
                 alert('val : ' + $('#full-name').val());
+            });
+            $('#set-text').click(function(){
+                $('.change-set-text').text("I'm veeramani,");
+            });
+            $('#set-html').click(function(){
+                $('.change-set-html').html("<strong>I'm veeramani,</strong>");
+            });
+            $('#set-val').click(function(){
+                $('#full-name-set').val('Good Morning');
             });
         });
     </script>
