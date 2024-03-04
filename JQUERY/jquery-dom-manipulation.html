@@ -6,7 +6,30 @@
     <title>jQuery DOM Manipulation</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    .add-css {
+        color: #8e0073;
+        font-size: 1.2rem;
+        font-family: serif;
+        font-weight: 600;
+    }
+    .remove-css {
+        color: #8e0073;
+        font-size: 1.2rem;
+        font-family: serif;
+        font-weight: 600;
+    }
+    body.dark {
+        background-color: #000;
+        color: #fff;
+    }
+    body.dark #toggleClass-btn::after{
+        content: 'hello';
+
+    }
+</style>
 <body>
 
     <section class="get-text-section py-5">
@@ -108,6 +131,167 @@
         </div>
     </section>
 
+    <section class="add-append-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Add New HTML Content - append(), prepend(), after(), and before()</h3>
+                    <p>append() - Inserts content at the end of the selected elements</p>
+                    <p>prepend() - Inserts content at the beginning of the selected elements</p>
+                    <p>after() - Inserts content after the selected elements</p>
+                    <p>before() - Inserts content before the selected elements</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Add New HTML Content - append()</h3>
+                    <p class="add-append"><span class="text-success fs-4">hello i'm learning JQuery</span>.</p>
+                    <button id="add-append-btn" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-prepend-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Add New HTML Content - prepend()</h3>
+                    <p class="add-prepend"><span class="text-info fs-4">it's Easy to learn</span>.</p>
+                    <button id="add-prepend-btn" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-after-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Add New HTML Content - after()</h3>
+                    <p class="add-after">hello I'm learning JQuery</span>.</p>
+                    <button id="add-after-btn" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-before-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Add New HTML Content - before()</h3>
+                    <p class="add-before">it's Easy to learn.</p>
+                    <button id="add-before-btn" class="btn btn-info">Show Text</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="remove-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Remove Elements/Content - remove(), empty()</h3>
+                    <p>remove() - Removes the selected element (and its child elements)</p>
+                    <p>empty() - Removes the child elements from the selected element</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Remove Elements/Content - remove()</h3>
+                    <div class="bg-secondary p-4 rounded mb-3" id="remove">
+                        <p class="my-auto">hello i'm learning JQuery.</p>
+                        <p class="my-auto">It's easy to learn.</p>
+                        <p class="my-auto">jQuery greatly simplifies JavaScript programming.</p>
+                    </div>
+                    <button id="remove-btn" class="btn btn-info">Remove Elements</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="empty-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Remove Elements/Content - empty()</h3>
+                    <div class="bg-success p-4 rounded mb-3" id="empty">
+                        <p class="my-auto">hello i'm learning JQuery.</p>
+                        <p class="my-auto">It's easy to learn.</p>
+                        <p class="my-auto">jQuery greatly simplifies JavaScript programming.</p>
+                    </div>
+                    <button id="empty-btn" class="btn btn-info">Remove Elements</button>
+                    <button id="empty-show-btn" class="btn btn-info">show Elements</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="addClass-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>jQuery Manipulating CSS - addClass(), removeClass(), toggleClass() and css()</h3>
+                    <p>addClass() - Adds one or more classes to the selected elements</p>
+                    <p>removeClass() - Removes one or more classes from the selected elements</p>
+                    <p>toggleClass() - Toggles between adding/removing classes from the selected elements</p>
+                    <p>css() - Sets or returns the style attribute</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Manipulating CSS - addClass()</h3>
+                    <div class="add-css-div">
+                        <p>hello i'm learning JQuery.</p>
+                        <p>It's easy to learn.</p>
+                        <p>jQuery greatly simplifies JavaScript programming.</p>
+                    </div>
+                    <button id="addClass-btn" class="btn btn-info">Add css class to Elements</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="removeClass-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3>Manipulating CSS - removeClass()</h3>
+                    <div class="remove-css-div">
+                        <p class="remove-css">hello i'm learning JQuery.</p>
+                        <p class="remove-css">It's easy to learn.</p>
+                        <p class="remove-css">jQuery greatly simplifies JavaScript programming.</p>
+                    </div>
+                    <button id="removeClass-btn" class="btn btn-info">Remove Elements</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="toggleClass-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3 class="pb-3">Manipulating CSS - toggleClass()</h3>
+                    <button id="toggleClass-btn" class="btn btn-info">Change to Dark Mood </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="toggleClass-section pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <h3 class="pb-3">css() Method</h3>
+                    <p>Set a CSS Property(single) -  css("propertyname","value");</p>
+                    <p>Set Multiple CSS Properties(mulitiple) - css({"propertyname":"value","propertyname":"value",...});</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function(){
@@ -128,6 +312,38 @@
             });
             $('#set-val').click(function(){
                 $('#full-name-set').val('Good Morning');
+            });
+            $('#add-append-btn').click(function(){
+                $('.add-append').append("it's Easy to Learn").css({'color':'blue','font-size':'20px'})
+            });
+            $('#add-prepend-btn').click(function(){
+                $('.add-prepend').prepend("hello I'm learning JQuery,").css({'color':'blue','font-size':'20px'})
+            });
+            $('#add-after-btn').click(function(){
+                $('.add-after').after("it's Easy to learn.</br>")
+            });
+            $('#add-before-btn').click(function(){
+                $('.add-before').before("hello I'm learning JQuery,</br>")
+            });
+            $('#remove-btn').click(function(){
+                $('#remove').remove();
+            });
+            $('#empty-btn').click(function(){
+                $('#empty').empty();
+            });
+            $('#empty-show-btn').click(function(){
+                $('#empty').html(`<p class="my-auto">hello i'm learning JQuery.</p>
+                <p class="my-auto">It's easy to learn.</p>
+                <p class="my-auto">jQuery greatly simplifies JavaScript programming.</p>`);
+            });
+            $('#addClass-btn').click(function(){
+                $('.add-css-div p').addClass('add-css');
+            });
+            $('#removeClass-btn').click(function(){
+                $('.remove-css-div p').removeClass('remove-css');
+            });
+            $('#toggleClass-btn').on('click', ()=> {
+                $('body').toggleClass('dark');
             });
         });
     </script>
